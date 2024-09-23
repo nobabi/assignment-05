@@ -55,49 +55,50 @@
 <body class="font-Inter scroll-smooth">
     <!-- Header Section content -->
     <header class="w-12/12">
-
-        <div class="h-[150px]">
-            <div class="navbar bg-base-100 h-[60px] bg-[#f9f7f3]">
-                <div class="navbar-start hidden sm:block">
-                    <button class="btn btn-active bg-buttonColor w-[100px] h-[30px] sm:w-[120px]">Blog</button>
-                </div>
-
-                <div class="navbar-center hidden sm:block lg:flex">
-                    <div class="flex justify-center items-center">
-                        <img src="/assets/logo.png" class="w-12 h-12 sm:w-25 sm:h-22 mb-2 sm:mb-5" alt="Logo">
+        <nav class="sticky top-0 z-50 bg-white shadow-lg p-4 text-white">
+           
+                <!-- Navbar Container -->
+                <div class="navbar bg-base-100 h-[60px] bg-[#f9f7f3]">
+                    <div class="navbar-start hidden sm:block">
+                        <button class="btn btn-active bg-buttonColor w-[100px] h-[30px] sm:w-[120px]">Blog</button>
                     </div>
-                    <div class="ml-2 sm:ml-4">
-                        <h3 class="text-black font-bold text-sm sm:text-base">Donate Bangladesh</h3>
+        
+                    <div class="navbar-center hidden sm:block lg:flex">
+                        <div class="flex justify-center items-center">
+                            <img src="/assets/logo.png" class="w-12 h-12 sm:w-25 sm:h-22 mb-2 sm:mb-5" alt="Logo">
+                        </div>
+                        <div class="ml-2 sm:ml-4">
+                            <h3 class="text-black font-bold text-sm sm:text-base">Donate Bangladesh</h3>
+                        </div>
+                    </div>
+        
+                    <div class="navbar-end hidden sm:flex justify-end items-center">
+                        <div class="flex items-center">
+                            <img src="/assets/coin.png" class="w-12 h-12 sm:w-25 sm:h-25" alt="Logo">
+                        </div>
+                        <div class="ml-2 sm:ml-4">
+                            <h3 class="text-black font-bold text-sm sm:text-base"><span id="headeTotal">5000</span><span>BDT</span></h3>
+                        </div>
+                    </div>
+        
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-btn" class="sm:hidden block">
+                        <i class="fa-solid fa-bars sm:hidden block text-2xl bg-primary px-3 py-2 rounded"></i>
+                        <i id="close-icon" class="fa-solid fa-xmark hidden text-2xl bg-primary px-3 py-2 rounded"></i>
+                    </button>
+                </div>
+        
+                <!-- Action Buttons -->
+                <div class="flex justify-center items-center mt-6 gap-2 sm:gap-5">
+                    <div>
+                        <button class="btn w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="donationId">Donation</button>
+                    </div>
+                    <div>
+                        <button class="btn bg-buttonColor w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="historyId">History</button>
                     </div>
                 </div>
-
-                <div class="navbar-end hidden sm:flex justify-end items-center">
-                    <div class="flex items-center">
-                        <img src="/assets/coin.png" class="w-12 h-12 sm:w-25 sm:h-25" alt="Logo">
-                    </div>
-                    <div class="ml-2 sm:ml-4">
-                        <h3 class="text-black font-bold text-sm sm:text-base"><span id="headeTotal">5000</span><span>BDT</span></h3>
-                    </div>
-                </div>
-
-                <button id="menu-btn" class="sm:hidden block">
-                    <i class="fa-solid fa-bars sm:hidden block text-2xl bg-primary px-3 py-2 rounded"></i>
-                    <i id="close-icon"
-                        class="fa-solid fa-xmark sm:block hidden text-2xl bg-primary px-3 py-2 rounded"></i>
-                </button>
-            </div>
-
-            <div class="flex justify-center items-center mt-6 gap-2 sm:gap-5">
-                <div>
-                    <button class="btn  w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="donationId">Donation</button>
-                </div>
-                <div>
-                    <button class="btn bg-buttonColor w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="historyId">History</button>
-                </div>
-
-
-            </div>
-        </div>
+            
+        </nav>
         <ul id="mobileMenu"
             class="hidden flex-col absolute top-16 p-5 shadow-lg rounded-2xl bg-slate-200 text-center w-full mx-auto z-50">
             <li class="hover:bg-primary py-2 rounded text-primary hover:text-secondary w-full">
@@ -126,7 +127,7 @@
   
     </header>
 
-    <main>
+    <main >
         <section class="w-11/12 mx-auto" id="donationSection">
             <div class="card card-side bg-base-100 shadow-xl flex flex-col sm:flex-row">
                 <figure class="w-full sm:w-2/4">
@@ -218,9 +219,9 @@
                       </p>
                     <div class="card-actions justify-start mt-4">
                         
-                        <button class="btn bg-buttonColor w-full font-bold text-black btn-donation" onclick="getValue('txtQuota','totalDonateAmountByQuota','thirdCardHead')">Donate Now</button>
+                        <button class="btn bg-buttonColor w-full font-bold text-black btn-donation" onclick="getValue('txtQuota','totalDonateAmountByQuota','thirdCardHead')" onclick="my_modal_1.showModal()">Donate Now</button>
 
-
+                        
                     </div>
                 </div>
 
