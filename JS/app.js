@@ -131,7 +131,7 @@ function getValue(textboxId, donationAmountId,headerId,) {
   console.log("historyContaineraraf",CtotalDonateAmount)
 
   historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-}
+
 
 
 const headerTotalElement = document.getElementById("headeTotal");
@@ -145,6 +145,13 @@ const CtotalDonateAmount2 = parseFloat(document.getElementById("totalDonateAmoun
 
 
 headerTotalElement.innerText = (headerTotal - CtotalDonateAmount2).toFixed(2); 
+
+// After the donation process, open the modal
+const myModal = document.getElementById("my_modal_1");
+if (myModal) {
+    myModal.showModal(); // Show the modal popup after donation
+}
+}
 
 
 
