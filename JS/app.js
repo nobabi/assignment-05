@@ -1,21 +1,20 @@
 
-  // Selecting the tabs and sections
   const historyTab = document.getElementById("historyId");
   const donationTab = document.getElementById("donationId");
   const donationSection = document.getElementById("donationSection");
   const historySection = document.getElementById("history-section");
 
-  // Set Donation Tab Active by Default
+
   window.onload = function () {
-    donationTab.classList.add("text-white", "bg-buttonColor"); // Add active styles to donation tab
-    donationSection.classList.remove("hidden"); // Show donation section
-    historySection.classList.add("hidden"); // Hide history section
+    donationTab.classList.add("text-white", "bg-buttonColor"); 
+    donationSection.classList.remove("hidden"); 
+    historySection.classList.add("hidden"); 
 
     historyTab.classList.remove("text-white", "bg-buttonColor");
     historyTab.classList.add("text-gray-600");
   };
 
-  // History Tab click event
+
   historyTab.addEventListener("click", function () {
     historyTab.classList.add("text-white", "bg-buttonColor");
     historyTab.classList.remove("text-gray-600");
@@ -23,11 +22,11 @@
     donationTab.classList.remove("text-white", "bg-buttonColor");
     donationTab.classList.add("text-gray-600");
 
-    donationSection.classList.add("hidden"); // Hide donation section
-    historySection.classList.remove("hidden"); // Show history section
+    donationSection.classList.add("hidden"); 
+    historySection.classList.remove("hidden"); 
   });
 
-  // Donation Tab click event
+
   donationTab.addEventListener("click", function () {
     donationTab.classList.add("text-white", "bg-buttonColor");
     donationTab.classList.remove("text-gray-600");
@@ -35,11 +34,11 @@
     historyTab.classList.remove("text-white", "bg-buttonColor");
     historyTab.classList.add("text-gray-600");
 
-    historySection.classList.add("hidden"); // Hide history section
-    donationSection.classList.remove("hidden"); // Show donation section
+    historySection.classList.add("hidden"); 
+    donationSection.classList.remove("hidden"); 
   });
 
-  // Show error function for form validation
+
   function showError(id) {
     console.log("Error function called", id);
     console.log(document.getElementById(id));
@@ -115,10 +114,10 @@ const CtotalDonateAmount2 = parseFloat(document.getElementById("totalDonateAmoun
 
 headerTotalElement.innerText = (headerTotal - textBoxValue).toFixed(2); 
 
-// After the donation process, open the modal
+
 const myModal = document.getElementById("my_modal_1");
 if (myModal) {
-    myModal.showModal(); // Show the modal popup after donation
+    myModal.showModal(); 
 }
 clearTextBox();
 }
