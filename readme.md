@@ -24,12 +24,12 @@
   - Current donation amount. ok
   - Input field for donation amount. ok
   - Button for submitting the donation. ok 
-- **History Section**: Initially hidden and empty.
+- **History Section**: Initially hidden and empty.ok
 
 ## Functionalities
 
 - **Donation and History Button Functionality**:
-  - Clicking the "History" button will hide the donation data and display the history.
+  - Clicking the "History" button will hide the donation data and display the history.ok
   - Clicking the "Donation" button will hide the history and display the donation data.
 - **Donation Functionality for Each Card**:
   - When the "Donate Now" button is clicked:
@@ -50,8 +50,8 @@
 
 ## Challenges
 
-- **Sticky Navbar**: Make the navbar sticky to the top of the page.
-- **Blog Page**: Create a `blog.html` file and link it to the main page:
+- **Sticky Navbar**: Make the navbar sticky to the top of the page.ok
+- **Blog Page**: Create a `blog.html` file and link it to the main page: ok
   - The blog page should contain 4 questions and their answers:
     1. What is the Document Object Model (DOM)?
     2. How do you select an element from the DOM?

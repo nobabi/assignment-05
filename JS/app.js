@@ -1,81 +1,51 @@
 
+  // Selecting the tabs and sections
+  const historyTab = document.getElementById("historyId");
+  const donationTab = document.getElementById("donationId");
+  const donationSection = document.getElementById("donationSection");
+  const historySection = document.getElementById("history-section");
 
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenuEl = document.getElementById("mobileMenu");
+  // Set Donation Tab Active by Default
+  window.onload = function () {
+    donationTab.classList.add("text-white", "bg-buttonColor"); // Add active styles to donation tab
+    donationSection.classList.remove("hidden"); // Show donation section
+    historySection.classList.add("hidden"); // Hide history section
 
-menuBtn.addEventListener("click",function(){
-    menuBtn.children[0].classList.toggle("hidden")
-    const  menuCloseBtn = document.getElementById("close-icon");
-        menuCloseBtn.classList.toggle("hidden")
-        mobileMenuEl.classList.toggle("hidden")
-        mobileMenuEl.classList.toggle("flex")
-});
-
-window.addEventListener("resize", function() {
-    if (window.innerWidth > 768) {
-        mobileMenuEl.classList.add("hidden");
-        mobileMenuEl.classList.remove("flex");
-        menuBtn.children[0].classList.remove("hidden");
-        menuCloseBtn.classList.add("hidden");
-    }
-});
-
-
-
-
-const historyTab = document.getElementById("historyId");
-const donationTab = document.getElementById("donationId");
-historyTab.addEventListener("click", function () {
-  historyTab.classList.add(
-    "text-white",
-    "bg-buttonColor",
-   
-  );
-
-   
-  historyTab.classList.remove("text-gray-600");
-  donationTab.classList.remove(
-    "text-white",
-    "bg-buttonColor"
-   
-  );
-  donationTab.classList.add("text-gray-600");
-
-
-  document.getElementById("donationSection").classList.add("hidden");
-  document.getElementById("history-section").classList.remove("hidden");
-});
-
-
-
-donationTab.addEventListener("click", function () {
-    donationTab.classList.add(
-      "text-white",
-      "bg-buttonColor",
-     
-    );
-
-    historyTab.classList.remove("text-gray-600");
-    historyTab.classList.remove(
-      "text-white",
-      "bg-buttonColor"
-     
-    );
+    historyTab.classList.remove("text-white", "bg-buttonColor");
     historyTab.classList.add("text-gray-600");
-  
+  };
 
-   
-  
-    document.getElementById("history-section").classList.add("hidden");
-    document.getElementById("donationSection").classList.remove("hidden");
+  // History Tab click event
+  historyTab.addEventListener("click", function () {
+    historyTab.classList.add("text-white", "bg-buttonColor");
+    historyTab.classList.remove("text-gray-600");
+
+    donationTab.classList.remove("text-white", "bg-buttonColor");
+    donationTab.classList.add("text-gray-600");
+
+    donationSection.classList.add("hidden"); // Hide donation section
+    historySection.classList.remove("hidden"); // Show history section
   });
 
-  
+  // Donation Tab click event
+  donationTab.addEventListener("click", function () {
+    donationTab.classList.add("text-white", "bg-buttonColor");
+    donationTab.classList.remove("text-gray-600");
+
+    historyTab.classList.remove("text-white", "bg-buttonColor");
+    historyTab.classList.add("text-gray-600");
+
+    historySection.classList.add("hidden"); // Hide history section
+    donationSection.classList.remove("hidden"); // Show donation section
+  });
+
+  // Show error function for form validation
   function showError(id) {
-    console.log("Error function called",id);
-    console.log(document.getElementById(id)); 
+    console.log("Error function called", id);
+    console.log(document.getElementById(id));
     document.getElementById(id).classList.remove("hidden");
-}
+  }
+
 
 
 
