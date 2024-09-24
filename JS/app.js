@@ -62,7 +62,7 @@ donationTab.addEventListener("click", function () {
      
     );
     historyTab.classList.add("text-gray-600");
-    console.log("nobab",historyTab)
+  
 
    
   
@@ -128,7 +128,7 @@ function getValue(textboxId, donationAmountId,headerId,) {
        
     `;
   const historyContainer = document.getElementById("history-list");
-  console.log("historyContaineraraf",CtotalDonateAmount)
+
 
   historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
@@ -138,20 +138,25 @@ const headerTotalElement = document.getElementById("headeTotal");
 
 
 const headerTotal = parseFloat(headerTotalElement.innerText);
-console.log("nobab99", headerTotal);
 
 
 const CtotalDonateAmount2 = parseFloat(document.getElementById("totalDonateAmount").innerText);
 
 
-headerTotalElement.innerText = (headerTotal - CtotalDonateAmount2).toFixed(2); 
+headerTotalElement.innerText = (headerTotal - textBoxValue).toFixed(2); 
 
 // After the donation process, open the modal
 const myModal = document.getElementById("my_modal_1");
 if (myModal) {
     myModal.showModal(); // Show the modal popup after donation
 }
+clearTextBox();
 }
 
 
-
+function clearTextBox()
+{
+ document.getElementById("txtNoakhali").value='';
+ document.getElementById("txtReliefId").value='';
+ document.getElementById("txtQuota").value='';
+}

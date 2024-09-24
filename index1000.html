@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 05</title>
     <!-- Font: Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,75 +51,83 @@
         }
     </script>
 </head>
-  <body>
-    <div class="flex flex-col h-screen">
-        <header class="text-white text-center mt-1">
-            <div class="flex justify-between bg-base-100 h-[60px] bg-[#f9f7f3] ">
-                <div class="lg:ml-5  ">
-                    <button class="btn btn-active bg-buttonColor lg:w-[100px] h-[30px] lg:mt-1 sm:mt-1  "><a href="./blog.html">Blog</a></button>
-                </div>
-    
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="/assets/logo.png" class="lg:w-12 h-12 sm:w-10 sm:h-10 mb-2 sm:mb-5" alt="Logo">
+
+<body class="font-Inter scroll-smooth">
+    <!-- Header Section content -->
+    <header class="w-12/12">
+        <nav class="sticky top-0 z-50 bg-white shadow-lg p-4 text-white">
+           
+                <!-- Navbar Container -->
+                <div class="navbar bg-base-100 h-[60px] bg-[#f9f7f3]">
+                    <div class="navbar-start hidden sm:block">
+                        <button class="btn btn-active bg-buttonColor w-[100px] h-[30px] sm:w-[120px]"><a href="./blog.html">Blog</a></button>
                     </div>
-                    <div class="lg:ml-2 sm:ml-2">
-                        <h3 class="text-black lg:font-bold  sm:text-sm">Donate Bangladesh</h3>
+        
+                    <div class="navbar-center hidden sm:block lg:flex">
+                        <div class="flex justify-center items-center">
+                            <img src="/assets/logo.png" class="w-12 h-12 sm:w-25 sm:h-22 mb-2 sm:mb-5" alt="Logo">
+                        </div>
+                        <div class="ml-2 sm:ml-4">
+                            <h3 class="text-black font-bold text-sm sm:text-base">Donate Bangladesh</h3>
+                        </div>
                     </div>
-                </div>
-    
-                <div class="flex justify-center items-center mr-5">
-                    <div class="flex items-center">
-                        <img src="/assets/coin.png" class="w-12 h-12 sm:w-25 sm:h-25" alt="Logo">
-                    </div>
-                    <div class="lg:ml-2 sm:ml-2">
-                        <h3 class="text-black font-bold text-sm sm:text-base"><span id="headeTotal">5000</span><span>BDT</span></h3>
-                    </div>
-                </div>
-    
-                <button id="menu-btn" class="sm:hidden block">
-                    <i class="fa-solid fa-bars sm:hidden block text-2xl bg-primary px-3 py-2 rounded"></i>
-                    <i id="close-icon" class="fa-solid fa-xmark hidden text-2xl bg-primary px-3 py-2 rounded"></i>
-                </button>
-            </div>
-    
-            <div class="flex justify-center items-center mt-6 gap-2 sm:gap-5">
-                <div>
-                    <button class="btn w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="donationId">Donation</button>
-                </div>
-                <div>
-                    <button class="btn bg-buttonColor w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="historyId">History</button>
-                </div>
-            </div>
-    
-            <ul id="mobileMenu"
-                class="hidden flex-col absolute top-16 p-5 shadow-lg rounded-2xl bg-slate-200 text-center w-full mx-auto z-50">
-                <li class="hover:bg-primary py-2 rounded text-primary hover:text-secondary w-full">
-                    <button class="btn btn-active bg-buttonColor w-[100px] h-[30px] sm:w-[120px]">Blog</button>
-                </li>
-                <li class="hover:bg-primary py-2 rounded hover:text-secondary w-full">
-                    <div class="flex justify-center items-center">
-                        <img src="/assets/logo.png" class="w-12 h-12 sm:w-25 sm:h-22 mb-2 sm:mb-5" alt="Logo">
-                    </div>
-                    <div class="ml-2 sm:ml-4">
-                        <h3 class="text-black font-bold text-sm sm:text-base">Donate Bangladesh</h3>
-                    </div>
-                </li>
-                <li class="hover:bg-primary py-2 rounded hover:text-secondary w-full">
-                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start">
-                        <div class="flex justify-center sm:justify-start">
+        
+                    <div class="navbar-end hidden sm:flex justify-end items-center">
+                        <div class="flex items-center">
                             <img src="/assets/coin.png" class="w-12 h-12 sm:w-25 sm:h-25" alt="Logo">
                         </div>
-                        <div class="ml-2 sm:ml-4 text-center sm:text-left">
-                            <h3 class="text-black font-bold text-sm sm:text-base">5500 <span>BDT</span></h3>
+                        <div class="ml-2 sm:ml-4">
+                            <h3 class="text-black font-bold text-sm sm:text-base"><span id="headeTotal">5000</span><span>BDT</span></h3>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </header>
-    
-    
-      <main class="flex-1 overflow-y-auto p-5">
+        
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-btn" class="sm:hidden block">
+                        <i class="fa-solid fa-bars sm:hidden block text-2xl bg-primary px-3 py-2 rounded"></i>
+                        <i id="close-icon" class="fa-solid fa-xmark hidden text-2xl bg-primary px-3 py-2 rounded"></i>
+                    </button>
+                </div>
+        
+                <!-- Action Buttons -->
+                <div class="flex justify-center items-center mt-6 gap-2 sm:gap-5">
+                    <div>
+                        <button class="btn w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="donationId">Donation</button>
+                    </div>
+                    <div>
+                        <button class="btn bg-buttonColor w-[100px] h-[30px] sm:w-[157px] sm:h-[30px]" id="historyId">History</button>
+                    </div>
+                </div>
+            
+        </nav>
+        <ul id="mobileMenu"
+            class="hidden flex-col absolute top-16 p-5 shadow-lg rounded-2xl bg-slate-200 text-center w-full mx-auto z-50">
+            <li class="hover:bg-primary py-2 rounded text-primary hover:text-secondary w-full">
+                <button class="btn btn-active bg-buttonColor w-[100px] h-[30px] sm:w-[120px]">Blog</button>
+            </li>
+            <li class="hover:bg-primary py-2 rounded hover:text-secondary w-full">
+                <div class="flex justify-center items-center">
+                    <img src="/assets/logo.png" class="w-12 h-12 sm:w-25 sm:h-22 mb-2 sm:mb-5" alt="Logo">
+                </div>
+                <div class="ml-2 sm:ml-4">
+                    <h3 class="text-black font-bold text-sm sm:text-base">Donate Bangladesh</h3>
+                </div>
+            </li>
+            <li class="hover:bg-primary py-2 rounded hover:text-secondary w-full">
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start">
+                    <div class="flex justify-center sm:justify-start">
+                        <img src="/assets/coin.png" class="w-12 h-12 sm:w-25 sm:h-25" alt="Logo">
+                    </div>
+                    <div class="ml-2 sm:ml-4 text-center sm:text-left">
+                        <h3 class="text-black font-bold text-sm sm:text-base">5500 <span>BDT</span></h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+  
+    </header>
+
+    <main >
         <section class="w-11/12 mx-auto" id="donationSection">
             <div class="card card-side bg-base-100 shadow-xl flex flex-col sm:flex-row">
                 <figure class="w-full sm:w-2/4">
@@ -247,22 +255,21 @@
             </div>
             
         </section>
+    <section>
+         <!-- History Section -->
+         <div
+         id="history-section"
+         class=" hidden  p-4 rounded-lg shadow-md bg-[#F9F7F3]"
+       >
+       
+         <div id="history-list" class="grid grid-cols-2 gap-3"></div>
+       </div>
 
-        <section>
-            <!-- History Section -->
-            <div
-            id="history-section"
-            class=" hidden  p-4 rounded-lg shadow-md bg-[#F9F7F3]"
-          >
-          
-            <div id="history-list" class="grid grid-cols-2 gap-3"></div>
-          </div>
-   
-       </section>
-      </main>
-      
-    </div>
+    </section>
+        </main>
 
-    <script src="./JS/app.js"></script>
-  </body>
+    <script src="/JS/app.js"></script>
+
+</body>
+
 </html>
